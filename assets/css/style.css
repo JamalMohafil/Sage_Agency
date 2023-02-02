@@ -1190,3 +1190,14 @@ overflow-x: hidden;
 .red {
   color: red;
 }
+
+.pag {
+  background-image: 
+  url("../images/hero-bg.png"),
+  var(--gradient-1);
+background-repeat: no-repeat, no-repeat, no-repeat;
+background-position: -280px bottom, center, center;
+background-size: auto, cover, auto;
+padding-block-start: 120px;
+padding-block-end: var(--section-padding);
+}
