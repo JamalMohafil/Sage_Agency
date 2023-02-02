@@ -1201,3 +1201,13 @@ background-size: auto, cover, auto;
 padding-block-start: 120px;
 padding-block-end: var(--section-padding);
 }
+@media (min-width:1500px){
+  #tre {
+      width: 70vw !important;
+  }
+}
+@media (min-width:2100px){
+  #tre {
+      width: 55vw !important;
+  }
+}
