@@ -70,12 +70,10 @@
             <a href="#features" class="navbar-link" data-navbar-link>Features</a>
           </li>
 
-          <li class="navbar-item">
-            <a href="#blog" class="navbar-link" data-navbar-link>Blog</a>
-          </li>
+     
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link" data-navbar-link>Contact Us</a>
+            <a href="#contact" class="navbar-link" data-navbar-link>Contact Us</a>
           </li>
 
         </ul>
@@ -292,7 +290,7 @@
                   <h3 class="h3 title">Idea & Analysis</h3>
 
                   <p class="text">
-                    Praesent tincidunt congue est ut hendrerit. Pellentesque et eros sit amet ipsum venenatis.
+                    We will think with you a good idea for your project and help you step by step. If you already have an idea, it will be easier, and we will help you with your idea to become a reality.
                   </p>
                 </div>
 
@@ -337,8 +335,8 @@
                   <h3 class="h3 title">Development</h3>
 
                   <p class="text">
-                    Praesent tincidunt congue est ut hendrerit. Pellentesque et eros sit amet ipsum venenatis.
-                  </p>
+                    Programming websites from scratch to the final form, writing structured codes with new modern designs, and creating online stores with special programming from our agencies
+                                  </p>
                 </div>
 
               </div>
@@ -355,7 +353,7 @@
                   <h3 class="h3 title">Testing & Lunching</h3>
 
                   <p class="text">
-                    Praesent tincidunt congue est ut hendrerit. Pellentesque et eros sit amet ipsum venenatis.
+                    We will try your site before anything, we will make sure everything is fine, and we will schedule the topic to become more quality and then launch it.
                   </p>
                 </div>
 
@@ -375,22 +373,29 @@
         - #BLOG
       -->
 
-      <section class="section blog" id="blog">
+      <section class="section blog" id="contact">
         <div class="container">
 
           <h2 class="h2 section-title underline">Contact Us</h2>
 
+          <form class="contact">
+            <input type="text" placeholder="Name" minlength="3" maxlength="25" required>
+            <br>
+            <input type="email" placeholder="Email" required>
+            <br>
+            <textarea placeholder="Message" id="codes" maxlength="1000" required></textarea><p style="position: absolute;" id="count"> </p>
+            <button type="submit" style="    margin: 10px auto;" class="btn">Submit</button>
+          </div>
          
 
-        </div>
+        </form>
       </section>
 
     </article>
   </main>
 
 
-
-
+  
 
   <!-- 
     - #FOOTER
@@ -439,24 +444,22 @@
           </li>
 
           <li>
-            <a href="#" class="footer-link">Home</a>
+            <a href="#home" class="footer-link">Home</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">About Us</a>
+            <a href="#about" class="footer-link">About Us</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Services</a>
+            <a href="#services" class="footer-link">Services</a>
           </li>
 
           <li>
             <a href="#" class="footer-link">Team</a>
           </li>
 
-          <li>
-            <a href="#" class="footer-link">Blog</a>
-          </li>
+    
 
         </ul>
 
@@ -598,6 +601,20 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    var codes = document.getElementById("codes");
+    var $count = document.getElementById("count")
+   $maxLength = codes.getAttribute("maxlength");
+   console.log($maxLength);
+  codes.oninput = function (){
+    $count.innerHTML = $maxLength - this.value.length;
+    if($count.innerHTML == 0){
+      $count.classList.add("red")
+    }else {
+      $count.classList.remove("red")
+    }
+  }
+  </script>
 
 </body>
 
